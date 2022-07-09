@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+body
+{
+  display: flex;
+  justify-content: center;  
+  min-height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+main
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+.container-title
+{
+  font-family: 'Bungee Shade', cursive;
+  color:#29c040;  
+  font-size: 30px;
+  margin-top: 20px;
+}
+.container
+{ 
+  top: 250px;
+  position: absolute;
+  display: flex;
+  transform-style: preserve-3d;
+  gap: 10px;
+  transform: rotateY(30deg) rotateX(10deg);  
+}
+.container .text
+{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  transition: 2.5s ease-in-out;
+}
+.container .text::before
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #373737;
+  transform-origin: left;
+  transform: rotateY(90deg) translateX(-50px);
+
+}
+.container .text span
+{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#29c040, #32ed4e);
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  color: #333;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(90deg * var(--i)))translateZ(50px);
+}
+.container-btn .btn
+{
+  display: flex;
+  margin-top: 80px;
+  border: none;
+  border-radius: 10px;
+  background-color:#32ed4e;
+  color:#2b2b2b;
+  font-size: 20px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+.container-btn .btn:hover
+{
+  background-color: #2b2b2b;
+  color: #29c040;
+}
+.container-list
+{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  background-color: #32ed4e;
+  padding: 0 10px;
+}
+.container-list a
+{
+  margin:10px 0;
+  font-size: 30px;
+  cursor: pointer;  
+  padding: 10px 20px;
+  text-decoration: none; 
+}
+a
+{
+  color: #2b2b2b;
+}
+.container-list a:hover
+{
+  background-color: #373737;
+  color: #29c040;
+}
+.container-resultado
+{
+  display: flex;
+  text-align: center;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;  
+  width: 500px;
+  height: 200px;
+  background-color: #32ed4e; 
+  color: #333;
+  border-radius: 10px;
+  font-size: 40px;
+  padding: 10px;
+  border: #2b2b2b solid;
+}
+.selected
+{
+  background-color:#333 ;
+  color: #29c040;
+}
+#numero-escolhido
+{
+  font-size: 30px;
+  color: #2b2b2b;
+  margin-top: 10px;
+}
